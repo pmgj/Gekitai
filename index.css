@@ -9,8 +9,6 @@ table {
 }
 
 td {
-    width: 49px;
-    height: 49px;
     border: 3px solid black;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -29,6 +27,13 @@ img {
     vertical-align: middle;
     position: relative;
     animation-fill-mode: backwards;
+}
+
+td,
+img {
+    --cell-size: 8vmin;
+    width: clamp(40px, var(--cell-size), 50px);
+    height: clamp(40px, var(--cell-size), 50px);
 }
 
 @keyframes path {

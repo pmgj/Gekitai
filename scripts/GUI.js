@@ -89,7 +89,9 @@ class GUI {
                         let { x: or, y: oc } = obj[0];
                         let td2 = this.getTableDate(obj[1]);
                         let { x: dr, y: dc } = obj[1];
-                        let anim = img.animate([{ top: 0, left: 0 }, { top: `${(dr - or) * 58}px`, left: `${(dc - oc) * 58}px` }], 1000);
+                        let td = document.querySelector("td");
+                        let size = td.offsetWidth;
+                        let anim = img.animate([{ top: 0, left: 0 }, { top: `${(dr - or) * size}px`, left: `${(dc - oc) * size}px` }], 1000);
                         anim.onfinish = () => td2.appendChild(img);
                     }
                 }
