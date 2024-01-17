@@ -9,18 +9,24 @@ table {
 }
 
 td {
+    all: revert;
     border: 3px solid black;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     text-align: center;
 }
 
-p {
-    text-align: center;
+table {
+    border-collapse: separate;
 }
 
-input {
-    width: 50px;
+caption {
+    caption-side: top;
+    color: black;
+}
+
+div, p {
+    text-align: center;
 }
 
 img {
